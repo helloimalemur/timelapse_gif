@@ -9,4 +9,5 @@ lapse.sh will create GIF in ~/timelapse/gifs using files within ~/timelapse
 
 
 (*/15 * * * * * /home/pi/.scripts/capture.sh) //captures picture every 15 mins
+
 (0 0 * * * * /home/pi/.scripts/lapse.sh) //creates .gif of images for the last day
