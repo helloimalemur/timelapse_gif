@@ -2,7 +2,9 @@
 creates day-long timelapse Gif of images captured over 15 minute intervals
 
 Intended to be used with CRON;
+
 Capture.sh will create images in ~/timelapse
+
 lapse.sh will create GIF in ~/timelapse/gifs using files within ~/timelapse
 
 
