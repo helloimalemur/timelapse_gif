@@ -43,7 +43,7 @@ cd ~/timelapse
 find . -maxdepth 1 -name "*.jpg" -size -1700k -type f -exec rm {} \;
 
 #create file list
-find . -maxdepth 1 -size +1M -type f | grep "$WHEN-2022" | uniq | sort >> /tmp/list.txt
+find . -maxdepth 1 -size +1M -type f | grep "$WHEN-2023" | uniq | sort >> /tmp/list.txt
 
 #execute
 cat /tmp/list.txt
@@ -56,4 +56,3 @@ convert -delay $SPEED -resize 50% -loop 0 `cat /tmp/list.txt` ~/timelapse/gifs/$
 #cleanup
 rm /tmp/list.txt 2>/dev/null
 echo "done!"
-
