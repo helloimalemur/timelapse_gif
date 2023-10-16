@@ -24,9 +24,9 @@ REF="$MONTH-$DAYBF"
 
 
 #setup
-mkdir ~/timelapse 2>/dev/null
-mkdir ~/timelapse/gifs 2>/dev/null
-rm /tmp/list.txt 2>/dev/null
+#mkdir ~/timelapse 2>/dev/null
+#mkdir ~/timelapse/gifs 2>/dev/null
+#rm /tmp/list.txt 2>/dev/null
 
 ###debug
 #echo $DAY "day"
@@ -43,7 +43,7 @@ cd ~/timelapse/
 find ~/timelapse/ -maxdepth 1 -name "*.jpg" -size -1700k -type f -exec rm {} \;
 
 #create file list
-find ~/timelapse/ -maxdepth 1 -size +1M -type f | grep "$WHEN-2023" | uniq | sort >> /tmp/list.txt
+find ~/timelapse/ -maxdepth 1 -size +1M -type f | grep "$WHEN-2023" | uniq | sort > /tmp/list.txt
 
 #execute
 cat /tmp/list.txt
