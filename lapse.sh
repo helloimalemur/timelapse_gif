@@ -37,13 +37,13 @@ rm /tmp/list.txt 2>/dev/null
 #echo $DAYBF "daybf"
 
 ###file-list
-cd ~/timelapse
+cd ~/timelapse/
 
 ##remove blanks
-find . -maxdepth 1 -name "*.jpg" -size -1700k -type f -exec rm {} \;
+find ~/timelapse/ -maxdepth 1 -name "*.jpg" -size -1700k -type f -exec rm {} \;
 
 #create file list
-find . -maxdepth 1 -size +1M -type f | grep "$WHEN-2023" | uniq | sort >> /tmp/list.txt
+find ~/timelapse/ -maxdepth 1 -size +1M -type f | grep "$WHEN-2023" | uniq | sort >> /tmp/list.txt
 
 #execute
 cat /tmp/list.txt
